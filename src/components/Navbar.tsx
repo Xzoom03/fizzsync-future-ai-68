@@ -1,10 +1,8 @@
 
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { Menu } from "lucide-react";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,40 +24,12 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Home</a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">How It Works</a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Pricing</a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Contact</a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Login</a>
+          <div className="flex items-center space-x-4">
             <Button className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white">
               Get Started
             </Button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <Menu className="h-6 w-6 text-white" />
-            </Button>
-          </div>
         </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-[#1A1F2C]/95 backdrop-blur-md">
-              <a href="#" className="block px-3 py-2 text-gray-300 hover:text-white">Home</a>
-              <a href="#" className="block px-3 py-2 text-gray-300 hover:text-white">How It Works</a>
-              <a href="#" className="block px-3 py-2 text-gray-300 hover:text-white">Pricing</a>
-              <a href="#" className="block px-3 py-2 text-gray-300 hover:text-white">Contact</a>
-              <a href="#" className="block px-3 py-2 text-gray-300 hover:text-white">Login</a>
-              <Button className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white mt-4">
-                Get Started
-              </Button>
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   );
