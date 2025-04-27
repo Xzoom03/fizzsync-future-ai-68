@@ -96,6 +96,6 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-dark-purple bg-line-texture min-h-screen;
   }
 }

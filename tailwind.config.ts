@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -9,7 +8,6 @@ export default {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -57,6 +55,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      backgroundImage: {
+        'line-texture': 'linear-gradient(to right, rgba(26, 31, 44, 0.95), rgba(26, 31, 44, 0.95)), repeating-linear-gradient(45deg, rgba(139, 92, 246, 0.05) 0, rgba(139, 92, 246, 0.05) 1px, transparent 0, transparent 50%)',
+      },
+      backgroundColor: {
+        'dark-purple': '#1A1F2C',
       },
       keyframes: {
         blob: {

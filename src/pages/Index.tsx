@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -10,12 +9,11 @@ const Index = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle email submission here
     console.log("Email submitted:", email);
   };
 
   return (
-    <div className="min-h-screen bg-[#1A1F2C] text-white font-inter">
+    <div className="min-h-screen bg-dark-purple bg-line-texture text-white font-inter">
       <Navbar />
       
       {/* Hero Section */}
