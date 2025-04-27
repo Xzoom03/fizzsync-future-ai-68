@@ -1,9 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import DashboardMockup from "@/components/DashboardMockup";
+import HowItWorks from "@/components/HowItWorks";
 
 const Index = () => {
   const [email, setEmail] = useState("");
@@ -48,6 +48,9 @@ const Index = () => {
 
         {/* Dashboard Mockup */}
         <DashboardMockup />
+
+        {/* How It Works Section */}
+        <HowItWorks />
 
         {/* Gradient Orbs */}
         <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob"></div>
