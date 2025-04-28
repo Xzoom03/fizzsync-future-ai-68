@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -57,10 +58,12 @@ export default {
         },
       },
       backgroundImage: {
-        'line-texture': 'linear-gradient(to right, rgba(26, 31, 44, 0.95), rgba(26, 31, 44, 0.95)), repeating-linear-gradient(45deg, rgba(139, 92, 246, 0.05) 0, rgba(139, 92, 246, 0.05) 1px, transparent 0, transparent 50%)',
+        'deep-purple-texture': 'linear-gradient(to right, rgba(26, 0, 51, 0.95), rgba(45, 0, 88, 0.95)), repeating-linear-gradient(45deg, rgba(155, 77, 255, 0.05) 0, rgba(155, 77, 255, 0.05) 1px, transparent 0, transparent 50%)',
       },
       backgroundColor: {
-        'dark-purple': '#1A1F2C',
+        'dark-purple': '#1A0033',
+        'medium-purple': '#2D0058',
+        'light-purple': '#9B4DFF',
       },
       keyframes: {
         blob: {
