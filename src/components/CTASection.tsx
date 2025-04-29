@@ -2,28 +2,14 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
-import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const CTASection = () => {
   const { toast } = useToast();
-  const form = useForm();
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const automationOptions = [
-    { id: "lead-generation", label: "Lead Generation" },
-    { id: "cold-email", label: "Cold Email Outreach" },
-    { id: "customer-support", label: "Customer Support" },
-    { id: "appointment-booking", label: "Appointment Booking" },
-    { id: "social-media", label: "Social Media Management" },
-    { id: "data-entry", label: "Data Entry / Internal Tasks" },
-    { id: "other", label: "Other" },
-  ];
-
   const onSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     setIsSubmitting(true);
@@ -126,30 +112,11 @@ const CTASection = () => {
               />
             </div>
 
-            <div className="space-y-3">
-              <Label className="text-white">
-                Which tasks do you want automated?
-              </Label>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {automationOptions.map((option) => (
-                  <div key={option.id} className="flex items-center space-x-2">
-                    <Checkbox id={option.id} className="data-[state=checked]:bg-[#9B4DFF] data-[state=checked]:border-[#9B4DFF]" />
-                    <Label 
-                      htmlFor={option.id} 
-                      className="text-[#D4AFFF] cursor-pointer"
-                    >
-                      {option.label}
-                    </Label>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="pt-4">
+            <div className="flex justify-center pt-4">
               <Button 
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full md:w-auto bg-[#9B4DFF] hover:bg-[#8A3DFF] text-white px-10 py-6 text-xl font-medium shadow-lg shadow-[#9B4DFF]/30 rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-70 disabled:hover:scale-100"
+                className="bg-[#9B4DFF] hover:bg-[#8A3DFF] text-white px-10 py-6 text-xl font-medium shadow-lg shadow-[#9B4DFF]/30 rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-70 disabled:hover:scale-100"
               >
                 {isSubmitting ? "Submitting..." : "Submit & Book Free Call"}
               </Button>

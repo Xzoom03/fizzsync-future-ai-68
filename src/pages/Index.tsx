@@ -68,29 +68,33 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Features Grid */}
+        {/* Features Section - Updated Style */}
         <div className="mt-32 mb-20">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div 
-                key={index}
-                className="p-6 rounded-xl bg-white/5 backdrop-blur-lg border border-[#9B4DFF]/20 hover:border-[#9B4DFF]/40 transition-all duration-300 shadow-lg shadow-[#9B4DFF]/5"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="p-2 rounded-lg bg-[#9B4DFF]/10">
+          <h2 className="text-3xl md:text-4xl font-bold font-outfit mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-[#D4AFFF]">
+            Why Choose FizzSync?
+          </h2>
+          
+          <div className="space-y-12">
+            <div className="grid md:grid-cols-2 gap-y-16 gap-x-12">
+              {features.map((feature, index) => (
+                <div 
+                  key={index}
+                  className="flex group"
+                >
+                  <div className="flex-shrink-0 p-3 rounded-full bg-[#9B4DFF]/10 mr-5 h-fit group-hover:bg-[#9B4DFF]/20 transition-all duration-300">
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-white">
+                    <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-[#D4AFFF] transition-colors">
                       {feature.title}
                     </h3>
-                    <p className="text-[#D4AFFF] leading-relaxed">
+                    <p className="text-[#D4AFFF]/80 leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
