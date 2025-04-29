@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import HowItWorks from "@/components/HowItWorks";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import CTASection from "@/components/CTASection";
 import { CheckCheck, Shield, Clock, Star, Rocket, Users, Wrench, Hand } from "lucide-react";
 
 const Index = () => {
@@ -119,8 +121,14 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Why Choose Us Section */}
+        <WhyChooseUs />
+
         {/* How It Works Section */}
         <HowItWorks />
+        
+        {/* CTA Section */}
+        <CTASection />
 
         {/* Decorative Elements */}
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#9B4DFF] rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob"></div>
