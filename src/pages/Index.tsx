@@ -102,9 +102,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Why Choose Us Section */}
-        <WhyChooseUs />
-
         {/* How It Works Section */}
         <HowItWorks />
         
