@@ -1,7 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import HowItWorks from "@/components/HowItWorks";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -9,13 +7,6 @@ import CTASection from "@/components/CTASection";
 import { CheckCheck, Shield, Clock, Star, Rocket, Users, Wrench, Hand } from "lucide-react";
 
 const Index = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Email submitted:", email);
-  };
-
   const features = [
     {
       icon: <Users className="w-8 h-8 text-[#9B4DFF]" />,
@@ -75,24 +66,6 @@ const Index = () => {
           <p className="mt-6 text-lg md:text-xl text-[#D4AFFF] max-w-2xl mx-auto">
             Replace manual work with smart, AI-powered solutions built for speed and efficiency.
           </p>
-
-          {/* Email Capture Form */}
-          <form onSubmit={handleSubmit} className="mt-8 max-w-md mx-auto flex flex-col sm:flex-row gap-4">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="bg-white/10 border-white/20 text-white placeholder:text-[#D4AFFF]/70"
-              required
-            />
-            <Button 
-              type="submit"
-              className="bg-[#9B4DFF] hover:bg-[#8A3DFF] text-white px-8 shadow-[0_0_15px_rgba(155,77,255,0.5)] hover:shadow-[0_0_20px_rgba(155,77,255,0.7)] transition-all duration-300"
-            >
-              Get Started
-            </Button>
-          </form>
         </div>
 
         {/* Features Grid */}
