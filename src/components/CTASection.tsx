@@ -10,26 +10,42 @@ const CTASection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const onSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: "Form submitted!",
-        description: "We'll be in touch with you shortly.",
+    try {
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+      
+      const response = await fetch('https://fizzwasay.app.n8n.cloud/webhook-test/fizzsync-lead', {
+        method: 'POST',
+        body: formData
       });
       
-      // Reset the form
-      const form = event.target as HTMLFormElement;
-      form.reset();
-    }, 1500);
+      if (response.ok) {
+        toast({
+          title: "Form submitted!",
+          description: "We'll be in touch with you shortly.",
+        });
+        form.reset();
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    } catch (error) {
+      toast({
+        title: "Submission failed",
+        description: "There was a problem submitting the form. Please try again.",
+        variant: "destructive"
+      });
+      console.error("Form submission error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <section className="py-24 relative">
+    <section id="contact-form" className="py-24 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold font-outfit mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-[#D4AFFF] text-center">
           Ready to Automate Your Future?
@@ -48,7 +64,7 @@ const CTASection = () => {
             Fill this quick form so we can understand your business and goals.
           </p>
 
-          <form onSubmit={onSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} method="POST" action="https://fizzwasay.app.n8n.cloud/webhook-test/fizzsync-lead" className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="firstName" className="text-white">
@@ -56,6 +72,7 @@ const CTASection = () => {
                 </Label>
                 <Input 
                   id="firstName"
+                  name="firstName"
                   className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70"
                   placeholder="Your first name"
                   required
@@ -67,6 +84,7 @@ const CTASection = () => {
                 </Label>
                 <Input 
                   id="email" 
+                  name="email"
                   type="email"
                   className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70"
                   placeholder="email@example.com"
@@ -81,17 +99,19 @@ const CTASection = () => {
               </Label>
               <Input 
                 id="website"
+                name="website"
                 className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70"
                 placeholder="https://yourwebsite.com"
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="businessDescription" className="text-white">
+              <Label htmlFor="businessInfo" className="text-white">
                 What does your business do?
               </Label>
               <Textarea 
-                id="businessDescription"
+                id="businessInfo"
+                name="businessInfo"
                 className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70"
                 placeholder="Briefly describe your business..."
                 rows={3}
@@ -100,11 +120,12 @@ const CTASection = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="problem" className="text-white">
+              <Label htmlFor="automationNeed" className="text-white">
                 What problem do you want to solve with AI?
               </Label>
               <Textarea 
-                id="problem"
+                id="automationNeed"
+                name="automationNeed"
                 className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70"
                 placeholder="Describe the challenges you're facing..."
                 rows={3}

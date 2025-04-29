@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import HowItWorks from "@/components/HowItWorks";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 import { CheckCheck, Shield, Clock, Star, Rocket, Users, Wrench, Hand } from "lucide-react";
 
 const Index = () => {
@@ -50,12 +51,19 @@ const Index = () => {
     }
   ];
 
+  const scrollToForm = () => {
+    const formElement = document.getElementById('contact-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1A0033] to-[#2D0058] text-white font-inter">
       <div className="absolute inset-0 bg-[url('/lovable-uploads/2b26f885-7efd-47c7-928f-66cfc17a8aa1.png')] bg-cover bg-center mix-blend-soft-light opacity-40"></div>
       <div className="absolute inset-0 bg-[url('/lovable-uploads/2b26f885-7efd-47c7-928f-66cfc17a8aa1.png')] bg-center bg-no-repeat opacity-10"></div>
       
-      <Navbar />
+      <Navbar onGetStarted={scrollToForm} />
       
       {/* Hero Section */}
       <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 md:pt-32">
@@ -69,11 +77,7 @@ const Index = () => {
         </div>
 
         {/* Features Section - Updated Style */}
-        <div className="mt-32 mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold font-outfit mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-[#D4AFFF]">
-            Why Choose FizzSync?
-          </h2>
-          
+        <div className="mt-32 mb-20">          
           <div className="space-y-12">
             <div className="grid md:grid-cols-2 gap-y-16 gap-x-12">
               {features.map((feature, index) => (
@@ -106,6 +110,9 @@ const Index = () => {
         
         {/* CTA Section */}
         <CTASection />
+        
+        {/* Footer */}
+        <Footer />
 
         {/* Decorative Elements */}
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#9B4DFF] rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob"></div>

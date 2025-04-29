@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ onGetStarted }: { onGetStarted: () => void }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -27,7 +27,10 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="flex items-center space-x-4">
-            <Button className="bg-[#9B4DFF] hover:bg-[#8A3DFF] text-white px-10 py-6 text-lg shadow-lg shadow-[#9B4DFF]/30">
+            <Button 
+              className="bg-[#9B4DFF] hover:bg-[#8A3DFF] text-white px-10 py-6 text-lg shadow-lg shadow-[#9B4DFF]/30"
+              onClick={onGetStarted}
+            >
               Get Started
             </Button>
           </div>
