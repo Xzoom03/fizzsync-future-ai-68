@@ -5,6 +5,7 @@ import HowItWorks from "@/components/HowItWorks";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import TechPartners from "@/components/TechPartners";
 import { CheckCheck, Shield, Clock, Star, Rocket, Users, Wrench, Hand } from "lucide-react";
 
 const Index = () => {
@@ -38,6 +39,9 @@ const Index = () => {
         
         {/* Why Choose Us Section */}
         <WhyChooseUs />
+        
+        {/* Tech Partners Section */}
+        <TechPartners />
         
         {/* CTA Section */}
         <CTASection />

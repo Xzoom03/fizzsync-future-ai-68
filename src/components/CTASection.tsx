@@ -45,7 +45,7 @@ const CTASection = () => {
   };
 
   return (
-    <section id="contact-form" className="py-24 relative">
+    <section id="contact-form" className="py-24 relative z-10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold font-outfit mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-[#D4AFFF] text-center">
           Ready to Automate Your Future?
@@ -56,7 +56,7 @@ const CTASection = () => {
         </p>
 
         {/* Onboarding Form */}
-        <div className="backdrop-blur-lg bg-white/5 border border-[#9B4DFF]/30 rounded-2xl p-8 shadow-lg">
+        <div className="backdrop-blur-lg bg-white/5 border border-[#9B4DFF]/30 rounded-2xl p-8 shadow-lg relative">
           <h3 className="text-2xl font-semibold mb-2 text-white text-center">
             Let's Build Your Automation
           </h3>
@@ -64,7 +64,7 @@ const CTASection = () => {
             Fill this quick form so we can understand your business and goals.
           </p>
 
-          <form onSubmit={handleSubmit} method="POST" action="https://fizzwasay.app.n8n.cloud/webhook-test/fizzsync-lead" className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="firstName" className="text-white">
@@ -73,7 +73,7 @@ const CTASection = () => {
                 <Input 
                   id="firstName"
                   name="firstName"
-                  className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70"
+                  className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF]"
                   placeholder="Your first name"
                   required
                 />
@@ -86,7 +86,7 @@ const CTASection = () => {
                   id="email" 
                   name="email"
                   type="email"
-                  className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70"
+                  className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF]"
                   placeholder="email@example.com"
                   required
                 />
@@ -100,7 +100,7 @@ const CTASection = () => {
               <Input 
                 id="website"
                 name="website"
-                className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70"
+                className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF]"
                 placeholder="https://yourwebsite.com"
               />
             </div>
@@ -112,7 +112,7 @@ const CTASection = () => {
               <Textarea 
                 id="businessInfo"
                 name="businessInfo"
-                className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70"
+                className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF]"
                 placeholder="Briefly describe your business..."
                 rows={3}
                 required
@@ -126,7 +126,7 @@ const CTASection = () => {
               <Textarea 
                 id="automationNeed"
                 name="automationNeed"
-                className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70"
+                className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF]"
                 placeholder="Describe the challenges you're facing..."
                 rows={3}
                 required
@@ -137,7 +137,7 @@ const CTASection = () => {
               <Button 
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[#9B4DFF] hover:bg-[#8A3DFF] text-white px-10 py-6 text-xl font-medium shadow-lg shadow-[#9B4DFF]/30 rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-70 disabled:hover:scale-100"
+                className="bg-[#9B4DFF] hover:bg-[#8A3DFF] text-white px-10 py-6 text-xl font-medium shadow-lg shadow-[#9B4DFF]/30 rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-70 disabled:hover:scale-100 w-full md:w-auto"
               >
                 {isSubmitting ? "Submitting..." : "Submit & Book Free Call"}
               </Button>
