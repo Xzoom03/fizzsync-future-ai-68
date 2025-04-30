@@ -8,49 +8,6 @@ import Footer from "@/components/Footer";
 import { CheckCheck, Shield, Clock, Star, Rocket, Users, Wrench, Hand } from "lucide-react";
 
 const Index = () => {
-  const features = [
-    {
-      icon: <Users className="w-8 h-8 text-[#9B4DFF]" />,
-      title: "No More Hiring Hassles",
-      description: "Automate repetitive tasks instantly — no interviews, no overhead, just results."
-    },
-    {
-      icon: <Star className="w-8 h-8 text-[#9B4DFF]" />,
-      title: "Simple to Use, Powerful Results",
-      description: "Our AI systems work out of the box with zero technical skills needed."
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-[#9B4DFF]" />,
-      title: "Completely Risk-Free",
-      description: "Start today with no upfront commitment — satisfaction guaranteed."
-    },
-    {
-      icon: <Wrench className="w-8 h-8 text-[#9B4DFF]" />,
-      title: "Unlimited Revisions, Unlimited Growth",
-      description: "We tweak and improve your automations until they're exactly what you need."
-    },
-    {
-      icon: <Rocket className="w-8 h-8 text-[#9B4DFF]" />,
-      title: "Built for Speed, Designed for Scale",
-      description: "Launch faster, scale smarter — without growing your headcount."
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-[#9B4DFF]" />,
-      title: "24/7 Automation, 0% Stress",
-      description: "Our AI doesn't sleep — automate workflows around the clock."
-    },
-    {
-      icon: <CheckCheck className="w-8 h-8 text-[#9B4DFF]" />,
-      title: "Custom Solutions, No Cookie-Cutter Bots",
-      description: "Every system is tailor-made to fit your exact business needs."
-    },
-    {
-      icon: <Hand className="w-8 h-8 text-[#9B4DFF]" />,
-      title: "Replace Manual Work Instantly",
-      description: "Free your team from repetitive tasks and focus on real growth."
-    }
-  ];
-
   const scrollToForm = () => {
     const formElement = document.getElementById('contact-form');
     if (formElement) {
@@ -74,32 +31,6 @@ const Index = () => {
           <p className="mt-6 text-lg md:text-xl text-[#D4AFFF] max-w-2xl mx-auto">
             Replace manual work with smart, AI-powered solutions built for speed and efficiency.
           </p>
-        </div>
-
-        {/* Features Section - Updated Style */}
-        <div className="mt-32 mb-20">          
-          <div className="space-y-12">
-            <div className="grid md:grid-cols-2 gap-y-16 gap-x-12">
-              {features.map((feature, index) => (
-                <div 
-                  key={index}
-                  className="flex group"
-                >
-                  <div className="flex-shrink-0 p-3 rounded-full bg-[#9B4DFF]/10 mr-5 h-fit group-hover:bg-[#9B4DFF]/20 transition-all duration-300">
-                    {feature.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-[#D4AFFF] transition-colors">
-                      {feature.title}
-                    </h3>
-                    <p className="text-[#D4AFFF]/80 leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* How It Works Section */}
