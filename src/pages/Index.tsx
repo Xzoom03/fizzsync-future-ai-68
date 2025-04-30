@@ -36,6 +36,9 @@ const Index = () => {
         {/* How It Works Section */}
         <HowItWorks />
         
+        {/* Why Choose Us Section */}
+        <WhyChooseUs />
+        
         {/* CTA Section */}
         <CTASection />
         
