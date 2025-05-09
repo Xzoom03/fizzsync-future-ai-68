@@ -87,7 +87,7 @@ const CTASection = () => {
                   required
                 />
               </div>
-              <div className="space-y-2 relative z-10">
+              <div className="space-y-2 relative z-20">
                 <Label htmlFor="email" className="text-white">
                   Your Email
                 </Label>
@@ -95,7 +95,7 @@ const CTASection = () => {
                   id="email" 
                   name="email"
                   type="email"
-                  className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF] relative z-10"
+                  className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF] relative z-20"
                   placeholder="email@example.com"
                   required
                 />
@@ -109,7 +109,7 @@ const CTASection = () => {
               <Input 
                 id="website"
                 name="website"
-                className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF]"
+                className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF] relative z-10"
                 placeholder="https://yourwebsite.com"
               />
             </div>
@@ -121,7 +121,7 @@ const CTASection = () => {
               <Textarea 
                 id="businessInfo"
                 name="businessInfo"
-                className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF]"
+                className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF] relative z-10"
                 placeholder="Briefly describe your business..."
                 rows={3}
                 required
@@ -135,18 +135,18 @@ const CTASection = () => {
               <Textarea 
                 id="automationNeed"
                 name="automationNeed"
-                className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF]"
+                className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF] relative z-10"
                 placeholder="Describe the challenges you're facing..."
                 rows={3}
                 required
               />
             </div>
 
-            <div className="flex justify-center pt-4 relative z-20">
+            <div className="flex justify-center pt-4 relative z-30">
               <Button 
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[#9B4DFF] hover:bg-[#8A3DFF] text-white px-10 py-6 text-xl font-medium shadow-lg shadow-[#9B4DFF]/30 rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-70 disabled:hover:scale-100 w-full md:w-auto relative z-20"
+                className="bg-[#9B4DFF] hover:bg-[#8A3DFF] text-white px-10 py-6 text-xl font-medium shadow-lg shadow-[#9B4DFF]/30 rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-70 disabled:hover:scale-100 w-full md:w-auto relative z-30"
               >
                 {isSubmitting ? "Submitting..." : "Submit & Book Free Call"}
               </Button>
@@ -155,9 +155,9 @@ const CTASection = () => {
         </div>
       </div>
       
-      {/* Decorative elements */}
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#9B4DFF] rounded-full mix-blend-multiply filter blur-[120px] opacity-15 animate-blob animation-delay-2000"></div>
-      <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#4B0082] rounded-full mix-blend-multiply filter blur-[150px] opacity-10 animate-blob animation-delay-4000"></div>
+      {/* Decorative elements - move these below the form content to prevent overlapping */}
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#9B4DFF] rounded-full mix-blend-multiply filter blur-[120px] opacity-15 animate-blob animation-delay-2000 -z-10"></div>
+      <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#4B0082] rounded-full mix-blend-multiply filter blur-[150px] opacity-10 animate-blob animation-delay-4000 -z-10"></div>
     </section>
   );
 };
