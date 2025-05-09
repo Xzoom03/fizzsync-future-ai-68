@@ -35,7 +35,7 @@ const Index = () => {
         </div>
 
         {/* Problem We Solve Section */}
-        <div className="mt-16 text-center max-w-3xl mx-auto py-10 px-6 backdrop-blur-sm bg-white/5 rounded-2xl border border-[#9B4DFF]/20">
+        <div className="mt-16 md:max-w-[calc(2*((100%-32px)/2))] mx-auto py-10 px-6 backdrop-blur-sm bg-white/5 rounded-2xl border border-[#9B4DFF]/20 text-center">
           <h2 className="text-2xl md:text-3xl font-bold font-outfit text-white mb-6">
             The Problem We Solve
           </h2>
