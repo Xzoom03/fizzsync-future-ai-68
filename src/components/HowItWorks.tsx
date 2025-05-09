@@ -10,8 +10,8 @@ const HowItWorks = () => {
     },
     {
       icon: <LayersIcon className="w-8 h-8 text-[#9B4DFF]" />,
-      title: "We Build Custom AI Solutions",
-      description: "Our team designs and implements smart, AI-powered automation tailored exactly to your needs. No cookie-cutter templates — only systems that fit your business."
+      title: "We Build Custom Smart Solutions",
+      description: "Our team designs and implements smart, automated systems tailored exactly to your needs. No cookie-cutter templates — only systems that fit your business."
     },
     {
       icon: <ArrowRight className="w-8 h-8 text-[#9B4DFF]" />,

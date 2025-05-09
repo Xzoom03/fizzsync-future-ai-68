@@ -27,10 +27,20 @@ const Index = () => {
       <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 md:pt-32">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold font-outfit bg-clip-text text-transparent bg-gradient-to-r from-white to-[#D4AFFF]">
-            AI Automation, Synced for the Future.
+            Smart Business Automation, Synced for the Future.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-[#D4AFFF] max-w-2xl mx-auto">
-            Replace manual work with smart, AI-powered solutions built for speed and efficiency.
+            Save hours of manual work, close more deals, and never miss a lead.
+          </p>
+        </div>
+
+        {/* Problem We Solve Section */}
+        <div className="mt-16 text-center max-w-3xl mx-auto py-10 px-6 backdrop-blur-sm bg-white/5 rounded-2xl border border-[#9B4DFF]/20">
+          <h2 className="text-2xl md:text-3xl font-bold font-outfit text-white mb-6">
+            The Problem We Solve
+          </h2>
+          <p className="text-lg md:text-xl text-[#D4AFFF] leading-relaxed">
+            Businesses waste hours daily on cold outreach. Our smart system automates messaging, follow-ups, and lead tracking — so you don't have to.
           </p>
         </div>
 

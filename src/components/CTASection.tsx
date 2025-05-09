@@ -18,9 +18,18 @@ const CTASection = () => {
       const form = event.currentTarget;
       const formData = new FormData(form);
       
-      const response = await fetch('https://fizzwasay.app.n8n.cloud/webhook-test/fizzsync-lead', {
+      // Convert FormData to JSON
+      const formDataObject: Record<string, string> = {};
+      formData.forEach((value, key) => {
+        formDataObject[key] = value.toString();
+      });
+      
+      const response = await fetch('https://n8n.srv817113.hstgr.cloud/webhook/fizzsyncform', {
         method: 'POST',
-        body: formData
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formDataObject)
       });
       
       if (response.ok) {
@@ -121,7 +130,7 @@ const CTASection = () => {
 
             <div className="space-y-2">
               <Label htmlFor="automationNeed" className="text-white">
-                What problem do you want to solve with AI?
+                What problem do you want to solve with automation?
               </Label>
               <Textarea 
                 id="automationNeed"

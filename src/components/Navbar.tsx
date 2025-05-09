@@ -18,7 +18,7 @@ const Navbar = ({ onGetStarted }: { onGetStarted: () => void }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <h1 className="text-3xl font-bold font-outfit bg-clip-text text-white">
+            <h1 className="text-3xl font-bold font-outfit text-white">
               FizzSync
             </h1>
           </div>

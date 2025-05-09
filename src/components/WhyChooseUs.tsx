@@ -6,7 +6,7 @@ const WhyChooseUs = () => {
     {
       icon: <Zap className="w-8 h-8 text-[#9B4DFF]" />,
       title: "Faster Delivery",
-      description: "Get your AI automation live in days, not weeks."
+      description: "Get your automation live in days, not weeks."
     },
     {
       icon: <CheckCheck className="w-8 h-8 text-[#9B4DFF]" />,
