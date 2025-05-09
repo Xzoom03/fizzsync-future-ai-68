@@ -39,8 +39,15 @@ const Index = () => {
           <h2 className="text-2xl md:text-3xl font-bold font-outfit text-white mb-6">
             The Problem We Solve
           </h2>
-          <p className="text-lg md:text-xl text-[#D4AFFF] leading-relaxed">
-            Businesses waste hours daily on cold outreach. Our smart system automates messaging, follow-ups, and lead tracking — so you don't have to.
+          <p className="text-lg text-[#D4AFFF] leading-relaxed mb-6">
+            Most businesses rely on multiple tools and manual effort to handle repetitive tasks — costing time, money, and productivity.
+          </p>
+          <p className="text-lg text-[#D4AFFF] leading-relaxed mb-6">
+            FizzSync delivers smart automation systems that replace the work of 4–5 staff members. 
+            From lead generation to outreach and follow-ups, our systems run 24/7 — without hiring, training, or micromanaging.
+          </p>
+          <p className="text-lg text-[#D4AFFF] leading-relaxed">
+            We help modern businesses scale faster by automating what slows them down.
           </p>
         </div>
 

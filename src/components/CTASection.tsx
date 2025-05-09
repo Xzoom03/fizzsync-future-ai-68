@@ -87,7 +87,7 @@ const CTASection = () => {
                   required
                 />
               </div>
-              <div className="space-y-2">
+              <div className="space-y-2 relative z-10">
                 <Label htmlFor="email" className="text-white">
                   Your Email
                 </Label>
@@ -95,7 +95,7 @@ const CTASection = () => {
                   id="email" 
                   name="email"
                   type="email"
-                  className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF]"
+                  className="bg-white/10 border-[#9B4DFF]/30 text-white placeholder:text-[#D4AFFF]/70 focus:border-[#9B4DFF] relative z-10"
                   placeholder="email@example.com"
                   required
                 />
@@ -142,11 +142,11 @@ const CTASection = () => {
               />
             </div>
 
-            <div className="flex justify-center pt-4">
+            <div className="flex justify-center pt-4 relative z-20">
               <Button 
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[#9B4DFF] hover:bg-[#8A3DFF] text-white px-10 py-6 text-xl font-medium shadow-lg shadow-[#9B4DFF]/30 rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-70 disabled:hover:scale-100 w-full md:w-auto"
+                className="bg-[#9B4DFF] hover:bg-[#8A3DFF] text-white px-10 py-6 text-xl font-medium shadow-lg shadow-[#9B4DFF]/30 rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-70 disabled:hover:scale-100 w-full md:w-auto relative z-20"
               >
                 {isSubmitting ? "Submitting..." : "Submit & Book Free Call"}
               </Button>
