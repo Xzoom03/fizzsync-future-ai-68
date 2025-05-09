@@ -61,7 +61,7 @@ const CTASection = () => {
         </h2>
         
         <p className="text-xl text-[#D4AFFF] mb-12 max-w-2xl mx-auto text-center">
-          Launch faster, grow smarter — with zero risk.
+          Launch faster, grow smarter with zero risk.
         </p>
 
         {/* Onboarding Form */}

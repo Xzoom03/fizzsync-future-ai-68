@@ -11,12 +11,12 @@ const WhyChooseUs = () => {
     {
       icon: <CheckCheck className="w-8 h-8 text-[#9B4DFF]" />,
       title: "Tailored Solutions",
-      description: "Custom-built automations made exactly for your business needs."
+      description: "Custom built automations made exactly for your business needs."
     },
     {
       icon: <Clock className="w-8 h-8 text-[#9B4DFF]" />,
       title: "24/7 Automation",
-      description: "Your business runs non-stop, even when you're offline."
+      description: "Your business runs non stop, even when you're offline."
     },
     {
       icon: <Shield className="w-8 h-8 text-[#9B4DFF]" />,
@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
     {
       icon: <Rocket className="w-8 h-8 text-[#9B4DFF]" />,
       title: "Secure and Scalable",
-      description: "Enterprise-grade security with room to grow effortlessly."
+      description: "Enterprise grade security with room to grow effortlessly."
     }
   ];
 
