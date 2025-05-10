@@ -6,7 +6,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import TechPartners from "@/components/TechPartners";
-import { Settings, CheckCheck, Shield, Clock, Star, Rocket, Users, Wrench } from "lucide-react";
+import { Settings, CheckCheck, Shield, Clock, Star, Rocket, Users, Wrench, Zap, BarChart } from "lucide-react";
 
 const Index = () => {
   const scrollToForm = () => {
@@ -34,12 +34,39 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Problem We Solve Section - Redesigned */}
+        {/* Problem We Solve Section - Enhanced */}
         <div className="mt-24 py-20 bg-gradient-to-r from-[#2D0058]/30 to-[#4B0082]/20 rounded-3xl relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 md:px-8 grid md:grid-cols-[1fr_2fr] gap-12 items-center">
-            <div className="flex justify-center md:justify-start">
-              <div className="p-6 rounded-full bg-[#9B4DFF]/10 border border-[#9B4DFF]/20">
-                <Settings className="w-16 h-16 text-[#9B4DFF] opacity-80" />
+            <div className="flex flex-col space-y-8">
+              {/* Stats and visual elements */}
+              <div className="flex items-center space-x-4">
+                <div className="p-4 rounded-full bg-[#9B4DFF]/10 border border-[#9B4DFF]/20">
+                  <Settings className="w-8 h-8 text-[#9B4DFF] opacity-80" />
+                </div>
+                <div>
+                  <span className="block text-3xl font-bold text-white">76%</span>
+                  <span className="text-[#D4AFFF]/80 text-sm">Time Saved</span>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="p-4 rounded-full bg-[#9B4DFF]/10 border border-[#9B4DFF]/20">
+                  <BarChart className="w-8 h-8 text-[#9B4DFF] opacity-80" />
+                </div>
+                <div>
+                  <span className="block text-3xl font-bold text-white">4.8x</span>
+                  <span className="text-[#D4AFFF]/80 text-sm">Productivity Boost</span>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="p-4 rounded-full bg-[#9B4DFF]/10 border border-[#9B4DFF]/20">
+                  <Zap className="w-8 h-8 text-[#9B4DFF] opacity-80" />
+                </div>
+                <div>
+                  <span className="block text-3xl font-bold text-white">24/7</span>
+                  <span className="text-[#D4AFFF]/80 text-sm">Automated Operations</span>
+                </div>
               </div>
             </div>
             <div className="text-left">

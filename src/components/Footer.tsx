@@ -13,53 +13,42 @@ const Footer = () => {
   return (
     <footer className="py-12 border-t border-[#9B4DFF]/30 mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          {/* Left Column - Logo and Tagline */}
-          <div className="flex flex-col">
-            <div className="flex items-center mb-4">
-              <img 
-                src="/lovable-uploads/00bed8f0-66e2-42ba-82d7-5941dfd8ede5.png" 
-                alt="FizzSync Logo" 
-                className="h-10 mr-2" 
-              />
-              <h1 className="text-2xl font-bold font-outfit text-white">
-                FizzSync
-              </h1>
-            </div>
-            <p className="text-[#D4AFFF]/80 text-sm mb-4">
+        <div className="flex flex-col items-center justify-center text-center">
+          {/* Logo and Tagline */}
+          <div className="flex flex-col items-center mb-8">
+            <img 
+              src="/lovable-uploads/00bed8f0-66e2-42ba-82d7-5941dfd8ede5.png" 
+              alt="FizzSync Logo" 
+              className="h-12 mb-3" 
+            />
+            <p className="text-[#D4AFFF]/80 text-sm">
               Automation Systems that Scale with You
             </p>
           </div>
           
-          {/* Right Column - Navigation Links */}
-          <div className="flex flex-col md:items-end">
-            <nav className="flex flex-col space-y-2">
-              <Link to="#" className="text-[#D4AFFF]/70 hover:text-[#D4AFFF] transition-colors">
-                Pricing
-              </Link>
-              <Link to="#" className="text-[#D4AFFF]/70 hover:text-[#D4AFFF] transition-colors">
-                How It Works
-              </Link>
-              <Link to="#" className="text-[#D4AFFF]/70 hover:text-[#D4AFFF] transition-colors">
-                Book a Call
-              </Link>
-              <button 
-                onClick={() => setTermsOpen(true)}
-                className="text-left text-[#D4AFFF]/70 hover:text-[#D4AFFF] transition-colors"
-              >
-                Terms of Service
-              </button>
-              <button 
-                onClick={() => setPrivacyOpen(true)}
-                className="text-left text-[#D4AFFF]/70 hover:text-[#D4AFFF] transition-colors"
-              >
-                Privacy
-              </button>
-            </nav>
-          </div>
-        </div>
-        
-        <div className="flex justify-center pt-8 border-t border-[#9B4DFF]/20 mt-8">
+          {/* Navigation Links */}
+          <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-10">
+            <Link to="#" className="text-[#D4AFFF]/70 hover:text-[#D4AFFF] transition-colors">
+              How It Works
+            </Link>
+            <Link to="#" className="text-[#D4AFFF]/70 hover:text-[#D4AFFF] transition-colors">
+              Book a Call
+            </Link>
+            <button 
+              onClick={() => setTermsOpen(true)}
+              className="text-[#D4AFFF]/70 hover:text-[#D4AFFF] transition-colors"
+            >
+              Terms of Service
+            </button>
+            <button 
+              onClick={() => setPrivacyOpen(true)}
+              className="text-[#D4AFFF]/70 hover:text-[#D4AFFF] transition-colors"
+            >
+              Privacy
+            </button>
+          </nav>
+          
+          {/* Copyright */}
           <p className="text-sm text-[#D4AFFF]/60">
             © {currentYear} FizzSync. All rights reserved.
           </p>
