@@ -6,7 +6,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import TechPartners from "@/components/TechPartners";
-import { CheckCheck, Shield, Clock, Star, Rocket, Users, Wrench, Hand } from "lucide-react";
+import { Settings, CheckCheck, Shield, Clock, Star, Rocket, Users, Wrench } from "lucide-react";
 
 const Index = () => {
   const scrollToForm = () => {
@@ -34,21 +34,31 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Problem We Solve Section */}
-        <div className="mt-16 md:max-w-[calc(2*((100%-32px)/2))] mx-auto py-10 px-6 backdrop-blur-sm bg-white/5 rounded-2xl border border-[#9B4DFF]/20 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold font-outfit text-white mb-6">
-            The Problem We Solve
-          </h2>
-          <p className="text-lg text-[#D4AFFF] leading-relaxed mb-6">
-            Most businesses rely on multiple tools and manual effort to handle repetitive tasks, costing time, money, and productivity.
-          </p>
-          <p className="text-lg text-[#D4AFFF] leading-relaxed mb-6">
-            FizzSync delivers smart automation systems that replace the work of 4 to 5 staff members.
-            From lead generation to outreach and follow-ups, our systems run 24/7 without hiring, training, or micromanaging.
-          </p>
-          <p className="text-lg text-[#D4AFFF] leading-relaxed">
-            We help modern businesses scale faster by automating what slows them down.
-          </p>
+        {/* Problem We Solve Section - Redesigned */}
+        <div className="mt-24 py-20 bg-gradient-to-r from-[#2D0058]/30 to-[#4B0082]/20 rounded-3xl relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6 md:px-8 grid md:grid-cols-[1fr_2fr] gap-12 items-center">
+            <div className="flex justify-center md:justify-start">
+              <div className="p-6 rounded-full bg-[#9B4DFF]/10 border border-[#9B4DFF]/20">
+                <Settings className="w-16 h-16 text-[#9B4DFF] opacity-80" />
+              </div>
+            </div>
+            <div className="text-left">
+              <h2 className="text-3xl md:text-4xl font-bold font-outfit text-white mb-6">
+                The Problem We Solve
+              </h2>
+              <div className="space-y-6 max-w-[700px]">
+                <p className="text-lg text-[#D4AFFF] leading-relaxed">
+                  Most businesses rely on multiple tools and manual effort to handle repetitive tasks, costing time, money, and productivity.
+                </p>
+                <p className="text-lg text-[#D4AFFF] leading-relaxed">
+                  FizzSync delivers smart automation systems that replace the work of 4 to 5 staff members. From lead generation to outreach and follow-ups, our systems run 24/7 without hiring, training, or micromanaging.
+                </p>
+                <p className="text-lg text-[#D4AFFF] leading-relaxed">
+                  We help modern businesses scale faster by automating what slows them down.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* How It Works Section */}
