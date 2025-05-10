@@ -14,16 +14,20 @@ const Navbar = ({ onGetStarted }: { onGetStarted: () => void }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const refreshPage = () => {
+    window.location.href = '/';
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-[#1A0033]/95 backdrop-blur-md" : "bg-transparent"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <Link to="/">
+            <a onClick={refreshPage} className="cursor-pointer">
               <h1 className="text-3xl font-bold font-outfit text-white cursor-pointer">
                 FizzSync
               </h1>
-            </Link>
+            </a>
           </div>
 
           {/* Desktop Menu */}
