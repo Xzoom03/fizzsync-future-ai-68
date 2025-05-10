@@ -7,9 +7,16 @@ import TermsOfService from "./TermsOfService";
 import { ScrollArea } from "./ui/scroll-area";
 
 const Footer = () => {
-  const currentYear = 2025; // Fixed to 2025 as requested
+  const currentYear = 2024; // Fixed to 2024 as requested
   const [termsOpen, setTermsOpen] = useState(false);
   const [privacyOpen, setPrivacyOpen] = useState(false);
+  
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   return (
     <footer className="py-12 border-t border-[#9B4DFF]/30 mt-10">
@@ -29,12 +36,18 @@ const Footer = () => {
           
           {/* Navigation Links */}
           <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-10">
-            <Link to="#" className="text-[#D4AFFF]/70 hover:text-[#D4AFFF] transition-colors">
+            <button 
+              onClick={() => scrollToSection('how-it-works')} 
+              className="text-[#D4AFFF]/70 hover:text-[#D4AFFF] transition-colors"
+            >
               How It Works
-            </Link>
-            <Link to="#" className="text-[#D4AFFF]/70 hover:text-[#D4AFFF] transition-colors">
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact-form')} 
+              className="text-[#D4AFFF]/70 hover:text-[#D4AFFF] transition-colors"
+            >
               Book a Call
-            </Link>
+            </button>
             <button 
               onClick={() => setTermsOpen(true)}
               className="text-[#D4AFFF]/70 hover:text-[#D4AFFF] transition-colors"

@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ onGetStarted }: { onGetStarted: () => void }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,9 +19,11 @@ const Navbar = ({ onGetStarted }: { onGetStarted: () => void }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <h1 className="text-3xl font-bold font-outfit text-white">
-              FizzSync
-            </h1>
+            <Link to="/">
+              <h1 className="text-3xl font-bold font-outfit text-white cursor-pointer">
+                FizzSync
+              </h1>
+            </Link>
           </div>
 
           {/* Desktop Menu */}
