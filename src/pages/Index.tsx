@@ -34,11 +34,11 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Problem We Solve Section - Enhanced */}
+        {/* Problem We Solve Section - Enhanced with better alignment */}
         <div className="mt-24 py-20 bg-gradient-to-r from-[#2D0058]/30 to-[#4B0082]/20 rounded-3xl relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 md:px-8 grid md:grid-cols-[1fr_2fr] gap-12 items-center">
-            <div className="flex flex-col space-y-8">
-              {/* Stats and visual elements */}
+            <div className="flex flex-col space-y-8 mx-auto">
+              {/* Stats and visual elements with better padding/alignment */}
               <div className="flex items-center space-x-4">
                 <div className="p-4 rounded-full bg-[#9B4DFF]/10 border border-[#9B4DFF]/20">
                   <Settings className="w-8 h-8 text-[#9B4DFF] opacity-80" />

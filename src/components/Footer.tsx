@@ -4,9 +4,10 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { useState } from "react";
 import PrivacyPolicy from "./PrivacyPolicy";
 import TermsOfService from "./TermsOfService";
+import { ScrollArea } from "./ui/scroll-area";
 
 const Footer = () => {
-  const currentYear = 2024; // Fixed to 2024 as requested
+  const currentYear = 2025; // Fixed to 2025 as requested
   const [termsOpen, setTermsOpen] = useState(false);
   const [privacyOpen, setPrivacyOpen] = useState(false);
   
@@ -57,21 +58,25 @@ const Footer = () => {
 
       {/* Terms of Service Modal */}
       <Dialog open={termsOpen} onOpenChange={setTermsOpen}>
-        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto bg-[#1A0033] border border-[#9B4DFF]/30">
+        <DialogContent className="max-w-3xl max-h-[80vh] overflow-hidden bg-[#1A0033] border border-[#9B4DFF]/30 rounded-2xl">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-white">Terms of Service</DialogTitle>
           </DialogHeader>
-          <TermsOfService />
+          <ScrollArea className="pr-4 custom-scrollbar h-[60vh]">
+            <TermsOfService />
+          </ScrollArea>
         </DialogContent>
       </Dialog>
 
       {/* Privacy Policy Modal */}
       <Dialog open={privacyOpen} onOpenChange={setPrivacyOpen}>
-        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto bg-[#1A0033] border border-[#9B4DFF]/30">
+        <DialogContent className="max-w-3xl max-h-[80vh] overflow-hidden bg-[#1A0033] border border-[#9B4DFF]/30 rounded-2xl">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-white">Privacy Policy</DialogTitle>
           </DialogHeader>
-          <PrivacyPolicy />
+          <ScrollArea className="pr-4 custom-scrollbar h-[60vh]">
+            <PrivacyPolicy />
+          </ScrollArea>
         </DialogContent>
       </Dialog>
     </footer>
