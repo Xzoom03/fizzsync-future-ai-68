@@ -5,7 +5,8 @@ import HowItWorks from "@/components/HowItWorks";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import TechPartners from "@/components/TechPartners";
+import IntegrationShowcase from "@/components/IntegrationShowcase";
+import ComparisonTable from "@/components/ComparisonTable";
 import { Settings, CheckCheck, Shield, Clock, Star, Rocket, Users, Wrench, Zap, BarChart } from "lucide-react";
 
 const Index = () => {
@@ -94,8 +95,11 @@ const Index = () => {
         {/* Why Choose Us Section */}
         <WhyChooseUs />
         
-        {/* Tech Partners Section */}
-        <TechPartners />
+        {/* Comparison Table Section */}
+        <ComparisonTable />
+        
+        {/* Integration Showcase Section */}
+        <IntegrationShowcase />
         
         {/* CTA Section */}
         <CTASection />

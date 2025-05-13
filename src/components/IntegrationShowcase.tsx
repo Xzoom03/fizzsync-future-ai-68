@@ -1,0 +1,99 @@
+
+import React from 'react';
+import { 
+  Telegram, 
+  WhatsApp, 
+  Slack, 
+  Notion, 
+  SheetsIcon, 
+  Zapier, 
+  MailCheck, 
+  CalendarCheck, 
+  CreditCard, 
+} from 'lucide-react';
+import { cn } from '@/lib/utils';
+
+const IntegrationShowcase = () => {
+  const integrations = [
+    { name: 'Telegram', icon: <Telegram className="h-10 w-10" /> },
+    { name: 'WhatsApp', icon: <WhatsApp className="h-10 w-10" /> },
+    { name: 'Slack', icon: <Slack className="h-10 w-10" /> },
+    { name: 'Notion', icon: <Notion className="h-10 w-10" /> },
+    { name: 'Google Sheets', icon: <SheetsIcon className="h-10 w-10" /> },
+    { name: 'Zapier', icon: <Zapier className="h-10 w-10" /> },
+    { 
+      name: 'Make',
+      icon: <div className="flex items-center justify-center h-10 w-10">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </div>
+    },
+    { 
+      name: 'n8n', 
+      icon: <div className="flex items-center justify-center h-10 w-10">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.5"/>
+          <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.5"/>
+          <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.5"/>
+          <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.5"/>
+        </svg>
+      </div> 
+    },
+    { name: 'Gmail', icon: <MailCheck className="h-10 w-10" /> },
+    { 
+      name: 'Airtable', 
+      icon: <div className="flex items-center justify-center h-10 w-10">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 12H21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M3 6H21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M3 18H21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M9 6V18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+        </svg>
+      </div>
+    },
+    { name: 'Stripe', icon: <CreditCard className="h-10 w-10" /> },
+    { name: 'Calendly', icon: <CalendarCheck className="h-10 w-10" /> },
+  ];
+
+  return (
+    <section className="py-16 relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold font-outfit mb-5 bg-clip-text text-transparent bg-gradient-to-r from-white to-[#D4AFFF]">
+          Works with Your Favorite Tools
+        </h2>
+        
+        <p className="text-[#D4AFFF] mb-12 max-w-2xl mx-auto">
+          FizzSync integrates seamlessly with the platforms you already use.
+        </p>
+        
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-items-center">
+          {integrations.map((integration) => (
+            <div key={integration.name} className="group flex flex-col items-center">
+              <div className={cn(
+                "bg-white/10 backdrop-blur-lg rounded-2xl p-6 w-20 h-20 flex items-center justify-center",
+                "border border-[#9B4DFF]/30 shadow-lg mb-3 group-hover:border-[#9B4DFF]/80",
+                "group-hover:shadow-[#9B4DFF]/20 group-hover:shadow-xl transition-all duration-300",
+                "group-hover:scale-110 text-[#D4AFFF] group-hover:text-white"
+              )}>
+                {integration.icon}
+              </div>
+              <p className="text-white text-sm font-medium">{integration.name}</p>
+            </div>
+          ))}
+        </div>
+        
+        <p className="text-[#D4AFFF]/80 mt-12 text-sm italic">
+          Need custom integration? We build systems around your workflow.
+        </p>
+      </div>
+      
+      {/* Decorative element */}
+      <div className="absolute -bottom-20 right-1/4 w-96 h-96 bg-[#9B4DFF] rounded-full mix-blend-multiply filter blur-[140px] opacity-10 animate-blob"></div>
+    </section>
+  );
+};
+
+export default IntegrationShowcase;
