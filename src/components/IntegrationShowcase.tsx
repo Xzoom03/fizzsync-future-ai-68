@@ -1,26 +1,60 @@
 
 import React from 'react';
 import { 
-  Telegram, 
-  WhatsApp, 
-  Slack, 
-  Notion, 
-  SheetsIcon, 
-  Zapier, 
   MailCheck, 
   CalendarCheck, 
   CreditCard, 
+  MessageCircle, 
+  FileSpreadsheet, 
+  Sheet 
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const IntegrationShowcase = () => {
   const integrations = [
-    { name: 'Telegram', icon: <Telegram className="h-10 w-10" /> },
-    { name: 'WhatsApp', icon: <WhatsApp className="h-10 w-10" /> },
-    { name: 'Slack', icon: <Slack className="h-10 w-10" /> },
-    { name: 'Notion', icon: <Notion className="h-10 w-10" /> },
-    { name: 'Google Sheets', icon: <SheetsIcon className="h-10 w-10" /> },
-    { name: 'Zapier', icon: <Zapier className="h-10 w-10" /> },
+    { 
+      name: 'Telegram', 
+      icon: <div className="flex items-center justify-center h-10 w-10">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M8 12L11 15L16 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </div> 
+    },
+    { 
+      name: 'WhatsApp', 
+      icon: <div className="flex items-center justify-center h-10 w-10">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M9 8H15C16.1046 8 17 8.89543 17 10V14C17 15.1046 16.1046 16 15 16H9C7.89543 16 7 15.1046 7 14V10C7 8.89543 7.89543 8 9 8Z" stroke="currentColor" strokeWidth="1.5"/>
+          <path d="M7 10L12 13L17 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </div> 
+    },
+    { 
+      name: 'Slack', 
+      icon: <MessageCircle className="h-10 w-10" /> 
+    },
+    { 
+      name: 'Notion', 
+      icon: <div className="flex items-center justify-center h-10 w-10">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4V20M18 4V20M3 8H8M16 8H21M3 12H21M3 16H8M16 16H21M3 20H21M3 4H21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </div> 
+    },
+    { 
+      name: 'Google Sheets', 
+      icon: <FileSpreadsheet className="h-10 w-10" /> 
+    },
+    { 
+      name: 'Zapier', 
+      icon: <div className="flex items-center justify-center h-10 w-10">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8V16M9 8V16M12 6V18M15 8V16M20 8V16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </div> 
+    },
     { 
       name: 'Make',
       icon: <div className="flex items-center justify-center h-10 w-10">
