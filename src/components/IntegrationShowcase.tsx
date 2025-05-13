@@ -5,8 +5,9 @@ import {
   CalendarCheck, 
   CreditCard, 
   MessageCircle, 
-  FileSpreadsheet, 
-  Sheet 
+  FileSpreadsheet,
+  Database,
+  Linkedin
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -36,19 +37,15 @@ const IntegrationShowcase = () => {
       icon: <MessageCircle className="h-10 w-10" /> 
     },
     { 
-      name: 'Notion', 
-      icon: <div className="flex items-center justify-center h-10 w-10">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 4V20M18 4V20M3 8H8M16 8H21M3 12H21M3 16H8M16 16H21M3 20H21M3 4H21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </div> 
+      name: 'Supabase', 
+      icon: <Database className="h-10 w-10" /> 
     },
     { 
       name: 'Google Sheets', 
       icon: <FileSpreadsheet className="h-10 w-10" /> 
     },
     { 
-      name: 'Zapier', 
+      name: 'Apify', 
       icon: <div className="flex items-center justify-center h-10 w-10">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M4 8V16M9 8V16M12 6V18M15 8V16M20 8V16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -56,14 +53,8 @@ const IntegrationShowcase = () => {
       </div> 
     },
     { 
-      name: 'Make',
-      icon: <div className="flex items-center justify-center h-10 w-10">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </div>
+      name: 'LinkedIn',
+      icon: <Linkedin className="h-10 w-10" />
     },
     { 
       name: 'n8n', 

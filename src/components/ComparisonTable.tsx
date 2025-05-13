@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -65,9 +64,13 @@ const ComparisonTable = () => {
   const renderStatus = (status: boolean | { value: boolean, note?: string }) => {
     if (typeof status === 'boolean') {
       return status ? (
-        <Check className="text-[#4ADE80] w-6 h-6" />
+        <div className="flex justify-center">
+          <Check className="text-[#4ADE80] w-6 h-6" />
+        </div>
       ) : (
-        <X className="text-[#F75555] w-6 h-6" />
+        <div className="flex justify-center">
+          <X className="text-[#F75555] w-6 h-6" />
+        </div>
       );
     } else {
       return (
