@@ -19,21 +19,26 @@ const Navbar = ({ onGetStarted }: { onGetStarted: () => void }) => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-[#1A0033]/95 backdrop-blur-md" : "bg-transparent"}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? "bg-[#1A0033]/85 backdrop-blur-md shadow-lg shadow-[#9B4DFF]/10 border-b border-[#9B4DFF]/20" 
+        : "bg-transparent"
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <a onClick={refreshPage} className="cursor-pointer">
-              <h1 className="text-3xl font-bold font-outfit text-white cursor-pointer">
+            <a onClick={refreshPage} className="group cursor-pointer flex items-center">
+              <h1 className="text-3xl font-bold font-outfit text-white group-hover:text-[#D4AFFF] transition-colors duration-300 cursor-pointer">
                 FizzSync
               </h1>
+              <div className="ml-2 h-2 w-2 rounded-full bg-[#9B4DFF] group-hover:bg-white transition-colors duration-300"></div>
             </a>
           </div>
 
           {/* Desktop Menu */}
           <div className="flex items-center space-x-4">
             <Button 
-              className="bg-[#9B4DFF] hover:bg-[#8A3DFF] text-white px-10 py-6 text-lg shadow-lg shadow-[#9B4DFF]/30"
+              className="bg-gradient-to-r from-[#9B4DFF] to-[#8A3DFF] hover:from-[#8A3DFF] hover:to-[#7A2DFF] text-white px-10 py-6 text-lg shadow-lg shadow-[#9B4DFF]/30 rounded-xl border border-[#9B4DFF]/40 transition-all duration-300 hover:shadow-xl hover:shadow-[#9B4DFF]/40 hover:scale-[1.03]"
               onClick={onGetStarted}
             >
               Get Started

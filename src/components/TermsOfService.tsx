@@ -29,7 +29,7 @@ const TermsOfService = () => {
       <section className="mb-6">
         <h3 className="text-xl font-semibold text-white mb-2">4. Payment & Billing</h3>
         <p>
-          Subscription plans are billed monthly. Add-ons such as Instagram lead generation or website chatbot 
+          Subscription plans are billed monthly. Add ons such as Instagram lead generation or website chatbot 
           are billed separately. Failure to pay may result in service suspension.
         </p>
       </section>
@@ -61,7 +61,7 @@ const TermsOfService = () => {
       <section className="mb-2">
         <h3 className="text-xl font-semibold text-white mb-2">8. Contact</h3>
         <p>
-          If you have any questions about these Terms, please contact us at [support@fizzsync.com].
+          If you have any questions about these Terms, please contact us at info@fizzsync.com.
         </p>
       </section>
     </div>

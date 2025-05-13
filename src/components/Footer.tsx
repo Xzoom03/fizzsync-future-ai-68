@@ -71,7 +71,7 @@ const Footer = () => {
 
       {/* Terms of Service Modal */}
       <Dialog open={termsOpen} onOpenChange={setTermsOpen}>
-        <DialogContent className="max-w-3xl max-h-[80vh] overflow-hidden bg-[#1A0033] border border-[#9B4DFF]/30 rounded-2xl">
+        <DialogContent className="max-w-3xl max-h-[80vh] overflow-hidden bg-[#2D0058]/80 backdrop-blur-md border border-[#9B4DFF]/40 rounded-2xl shadow-lg shadow-[#9B4DFF]/10">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-white">Terms of Service</DialogTitle>
           </DialogHeader>
@@ -83,7 +83,7 @@ const Footer = () => {
 
       {/* Privacy Policy Modal */}
       <Dialog open={privacyOpen} onOpenChange={setPrivacyOpen}>
-        <DialogContent className="max-w-3xl max-h-[80vh] overflow-hidden bg-[#1A0033] border border-[#9B4DFF]/30 rounded-2xl">
+        <DialogContent className="max-w-3xl max-h-[80vh] overflow-hidden bg-[#2D0058]/80 backdrop-blur-md border border-[#9B4DFF]/40 rounded-2xl shadow-lg shadow-[#9B4DFF]/10">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-white">Privacy Policy</DialogTitle>
           </DialogHeader>

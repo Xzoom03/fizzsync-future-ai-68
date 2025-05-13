@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
       <section className="mb-6">
         <h3 className="text-xl font-semibold text-white mb-2">4. Data Sharing</h3>
         <p>
-          We do not sell or rent your data. Information may be shared with third-party services 
+          We do not sell or rent your data. Information may be shared with third party services 
           strictly for functionality (e.g., email tools or analytics).
         </p>
       </section>
@@ -47,7 +47,7 @@ const PrivacyPolicy = () => {
       <section className="mb-6">
         <h3 className="text-xl font-semibold text-white mb-2">6. Security</h3>
         <p>
-          We use industry-standard methods to protect your data from unauthorized access or disclosure.
+          We use industry standard methods to protect your data from unauthorized access or disclosure.
         </p>
       </section>
       
@@ -61,7 +61,7 @@ const PrivacyPolicy = () => {
       <section className="mb-2">
         <h3 className="text-xl font-semibold text-white mb-2">8. Contact</h3>
         <p>
-          Questions? Reach us at [support@fizzsync.com].
+          Questions? Reach us at info@fizzsync.com.
         </p>
       </section>
     </div>
