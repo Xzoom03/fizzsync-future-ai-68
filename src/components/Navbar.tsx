@@ -31,7 +31,6 @@ const Navbar = ({ onGetStarted }: { onGetStarted: () => void }) => {
               <h1 className="text-3xl font-bold font-outfit text-white group-hover:text-[#D4AFFF] transition-colors duration-300 cursor-pointer">
                 FizzSync
               </h1>
-              <div className="ml-2 h-2 w-2 rounded-full bg-[#9B4DFF] group-hover:bg-white transition-colors duration-300"></div>
             </a>
           </div>
 

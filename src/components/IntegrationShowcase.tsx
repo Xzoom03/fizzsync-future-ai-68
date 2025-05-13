@@ -103,7 +103,7 @@ const IntegrationShowcase = () => {
           FizzSync integrates seamlessly with the platforms you already use.
         </p>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-items-center mx-auto">
           {integrations.map((integration) => (
             <div key={integration.name} className="group flex flex-col items-center">
               <div className={cn(
