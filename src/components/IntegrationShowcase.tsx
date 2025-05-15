@@ -100,9 +100,9 @@ const IntegrationShowcase = () => {
               <div className={cn(
                 "bg-white/10 backdrop-blur-lg rounded-2xl p-6 w-20 h-20 flex items-center justify-center",
                 "border border-[#9B4DFF]/30 shadow-lg mb-3",
-                "transition-all duration-300 transform group-hover:border-[#9B4DFF]/80",
-                "group-hover:shadow-[#9B4DFF]/20 group-hover:shadow-xl",
-                "group-hover:scale-110 text-[#D4AFFF] group-hover:text-white"
+                "transition-all duration-300 transform hover:scale-110 group-hover:border-[#9B4DFF]/80",
+                "hover:shadow-[#9B4DFF]/20 hover:shadow-xl",
+                "text-[#D4AFFF] hover:text-white"
               )}>
                 {integration.icon}
               </div>
