@@ -96,8 +96,13 @@
     @apply border-border;
   }
 
+  html {
+    @apply text-base;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
-    @apply bg-[#1A0033] text-white min-h-screen;
+    @apply bg-[#1A0033] text-white min-h-screen overflow-x-hidden;
   }
 }
 
@@ -179,4 +184,16 @@
   .bg-gradient-conic {
     background-image: conic-gradient(var(--tw-gradient-stops));
   }
+}
+
+/* Responsive table fixes */
+@media (max-width: 640px) {
+  .custom-scrollbar {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Fix for n8n chat widget */
+.n8n-chat-widget {
+  z-index: 9999 !important;
 }

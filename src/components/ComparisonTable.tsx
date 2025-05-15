@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Check, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -119,7 +120,7 @@ const ComparisonTable = () => {
                   <TableRow 
                     key={index} 
                     className={cn(
-                      "border-b border-[#9B4DFF]/10 hover:bg-[#9B4DFF]/10 transition-colors",
+                      "border-b border-[#9B4DFF]/10 transition-colors",
                       index % 2 === 0 ? "bg-[#9B4DFF]/5" : "bg-transparent"
                     )}
                   >
