@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Check, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -103,7 +104,7 @@ const ComparisonTable = () => {
           <div className="overflow-x-auto custom-scrollbar">
             <Table>
               <TableHeader>
-                <TableRow className="border-b border-[#9B4DFF]/20">
+                <TableRow className="border-b border-[#9B4DFF]/20 hover:bg-transparent">
                   <TableHead className="text-white font-semibold py-4 px-6">Feature</TableHead>
                   <TableHead className="text-white font-semibold py-4 px-6 text-center">
                     <div className="flex flex-col items-center">
@@ -119,7 +120,7 @@ const ComparisonTable = () => {
                   <TableRow 
                     key={index} 
                     className={cn(
-                      "border-b border-[#9B4DFF]/10 hover:bg-[#9B4DFF]/10 transition-colors",
+                      "border-b border-[#9B4DFF]/10 hover:bg-[#9B4DFF]/20 transition-colors",
                       index % 2 === 0 ? "bg-[#9B4DFF]/5" : "bg-transparent"
                     )}
                   >

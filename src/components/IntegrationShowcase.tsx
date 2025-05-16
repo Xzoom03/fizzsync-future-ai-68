@@ -70,7 +70,7 @@ const IntegrationShowcase = () => {
     { name: 'Gmail', icon: <MailCheck className="h-10 w-10" /> },
     { 
       name: 'Airtable', 
-      icon: <div className="flex items-center justify-center h-10 w-10">
+      icon: <div className="flex items-center justify-center h-10 w-10 group-hover:text-white transition-colors">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3 12H21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
           <path d="M3 6H21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
@@ -79,7 +79,7 @@ const IntegrationShowcase = () => {
         </svg>
       </div>
     },
-    { name: 'Stripe', icon: <CreditCard className="h-10 w-10" /> },
+    { name: 'Stripe', icon: <CreditCard className="h-10 w-10 group-hover:text-white transition-colors" /> },
     { name: 'Calendly', icon: <CalendarCheck className="h-10 w-10" /> },
   ];
 
