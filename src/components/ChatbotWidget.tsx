@@ -1,14 +1,17 @@
 
 import React, { useEffect } from 'react';
 
+// Define types for the n8n chat API
+interface ChatConfig {
+  webhookUrl: string;
+  theme?: {
+    customStyles?: string;
+  };
+}
+
 declare global {
   interface Window {
-    createChat: (config: {
-      webhookUrl: string;
-      theme?: {
-        customStyles?: string;
-      };
-    }) => void;
+    createChat?: (config: ChatConfig) => void;
   }
 }
 
@@ -71,10 +74,9 @@ const ChatbotWidget = () => {
     script.type = 'module';
     script.onload = () => {
       // Script loaded, now create chat with custom theme
-      import('https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js')
-        .then(module => {
-          const { createChat } = module;
-          createChat({
+      if (window.createChat) {
+        try {
+          window.createChat({
             webhookUrl: 'https://n8n.srv817113.hstgr.cloud/webhook/f64cefa7-a08c-47dd-a7fe-060100cc3690/chat',
             theme: {
               customStyles: `
@@ -196,10 +198,12 @@ const ChatbotWidget = () => {
               `
             }
           });
-        })
-        .catch(error => {
-          console.error('Error loading n8n chat:', error);
-        });
+        } catch (error) {
+          console.error('Error initializing chat widget:', error);
+        }
+      } else {
+        console.error('Chat widget initialization failed: createChat function not available');
+      }
     };
     
     script.src = 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
