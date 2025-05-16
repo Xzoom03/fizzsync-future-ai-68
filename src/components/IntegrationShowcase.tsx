@@ -102,7 +102,8 @@ const IntegrationShowcase = () => {
                 "border border-[#9B4DFF]/30 shadow-lg mb-3",
                 "transition-all duration-300 transform group-hover:border-[#9B4DFF]/80",
                 "group-hover:shadow-[#9B4DFF]/20 group-hover:shadow-xl",
-                "group-hover:scale-110 text-[#D4AFFF] group-hover:text-white"
+                "group-hover:scale-110 text-[#D4AFFF]",
+                "group-hover:text-white group-hover:bg-[#9B4DFF]/20"
               )}>
                 {integration.icon}
               </div>

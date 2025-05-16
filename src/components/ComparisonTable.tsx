@@ -121,7 +121,8 @@ const ComparisonTable = () => {
                     key={index} 
                     className={cn(
                       "border-b border-[#9B4DFF]/10 transition-colors",
-                      index % 2 === 0 ? "bg-[#9B4DFF]/5" : "bg-transparent"
+                      index % 2 === 0 ? "bg-[#9B4DFF]/5" : "bg-transparent",
+                      "hover:bg-[#9B4DFF]/15"
                     )}
                   >
                     <TableCell className="py-4 px-6 font-medium text-white">{row.feature}</TableCell>
