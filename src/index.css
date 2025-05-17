@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -49,59 +50,6 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
-    
-    /* FizzSync Chatbot Custom Variables */
-    --chat--color-primary: #9B4DFF;
-    --chat--color-primary-shade-50: #8a44e0;
-    --chat--color-primary-shade-100: #7a3bc7;
-    --chat--color-secondary: #6A0DAD;
-    --chat--color-secondary-shade-50: #5c0b96;
-    --chat--color-secondary-shade-100: #4e0980;
-    --chat--color-white: #ffffff;
-    --chat--color-light: #f2f4f8;
-    --chat--color-light-shade-50: #D4AFFF;
-    --chat--color-light-shade-100: #c2c5cc;
-    --chat--color-medium: #d2d4d9;
-    --chat--color-dark: #1A0033;
-    --chat--color-disabled: #777980;
-    --chat--color-typing: #D4AFFF;
-
-    --chat--spacing: 1rem;
-    --chat--border-radius: 0.75rem;
-    --chat--transition-duration: 0.3s;
-
-    --chat--window--width: 380px;
-    --chat--window--height: 580px;
-
-    --chat--header-height: auto;
-    --chat--header--padding: 1.25rem;
-    --chat--header--background: linear-gradient(135deg, #1A0033, #2D0058);
-    --chat--header--color: #ffffff;
-    --chat--header--border-top: none;
-    --chat--header--border-bottom: none;
-    --chat--heading--font-size: 1.5rem;
-    --chat--subtitle--font-size: 0.9rem;
-    --chat--subtitle--line-height: 1.5;
-
-    --chat--textarea--height: 60px;
-
-    --chat--message--font-size: 1rem;
-    --chat--message--padding: 1rem;
-    --chat--message--border-radius: 1.2rem;
-    --chat--message-line-height: 1.5;
-    --chat--message--bot--background: rgba(155, 77, 255, 0.1);
-    --chat--message--bot--color: #ffffff;
-    --chat--message--bot--border: 1px solid rgba(155, 77, 255, 0.2);
-    --chat--message--user--background: #6A0DAD;
-    --chat--message--user--color: #ffffff;
-    --chat--message--user--border: none;
-    --chat--message--pre--background: rgba(26, 0, 51, 0.3);
-
-    --chat--toggle--background: #9B4DFF;
-    --chat--toggle--hover--background: #8a44e0;
-    --chat--toggle--active--background: #7a3bc7;
-    --chat--toggle--color: #ffffff;
-    --chat--toggle--size: 60px;
   }
 
   .dark {
@@ -155,40 +103,7 @@
   background: #6A0DAD; /* Color of the scroll thumb on hover */
 }
 
-/* FizzSync Chatbot Custom Styles */
-.n8n-chat__window {
-  border-radius: 1rem !important;
-  overflow: hidden !important;
-  backdrop-filter: blur(10px) !important;
-  box-shadow: 0 0 30px rgba(155, 77, 255, 0.4), 
-              0 0 15px rgba(155, 77, 255, 0.3),
-              0 0 5px rgba(155, 77, 255, 0.2) !important;
-  border: 1px solid rgba(155, 77, 255, 0.2) !important;
-  background: rgba(26, 0, 51, 0.85) !important;
-}
-
-.n8n-chat__messages {
-  background: linear-gradient(180deg, rgba(26, 0, 51, 0.95), rgba(45, 0, 88, 0.85)) !important;
-  padding: 1rem !important;
-}
-
-.n8n-chat__message-bubble--bot {
-  position: relative !important;
-  background: rgba(155, 77, 255, 0.15) !important;
-  border: 1px solid rgba(155, 77, 255, 0.2) !important;
-  color: #D4AFFF !important;
-  border-radius: 1.2rem 1.2rem 1.2rem 0 !important;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
-  backdrop-filter: blur(5px) !important;
-}
-
-.n8n-chat__message-bubble--user {
-  background: linear-gradient(135deg, #6A0DAD, #9B4DFF) !important;
-  border-radius: 1.2rem 1.2rem 0 1.2rem !important;
-  color: white !important;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
-}
-
+/* New chatbot styling */
 .n8n-chat__toggle {
   border-radius: 50% !important;
   box-shadow: 0 0 20px rgba(155, 77, 255, 0.6), 
@@ -224,8 +139,60 @@
   animation: pulse-ring 2.5s infinite ease-out;
 }
 
-.n8n-chat__toggle-icon {
-  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.8)) !important;
+.n8n-chat__window {
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 0 30px rgba(155, 77, 255, 0.4), 
+              0 0 15px rgba(155, 77, 255, 0.3),
+              0 0 5px rgba(155, 77, 255, 0.2) !important;
+  border: 1px solid rgba(155, 77, 255, 0.2) !important;
+  background: rgba(26, 0, 51, 0.85) !important;
+}
+
+.n8n-chat__messages {
+  background: linear-gradient(180deg, rgba(26, 0, 51, 0.95), rgba(45, 0, 88, 0.85)) !important;
+  padding: 1rem !important;
+}
+
+.n8n-chat__message-bubble--bot {
+  position: relative !important;
+  background: rgba(155, 77, 255, 0.15) !important;
+  border: 1px solid rgba(155, 77, 255, 0.2) !important;
+  color: #D4AFFF !important;
+  border-radius: 1.2rem 1.2rem 1.2rem 0 !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(5px) !important;
+}
+
+.n8n-chat__message-bubble--user {
+  background: linear-gradient(135deg, #6A0DAD, #9B4DFF) !important;
+  border-radius: 1.2rem 1.2rem 0 1.2rem !important;
+  color: white !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.n8n-chat__header {
+  background: linear-gradient(135deg, #1A0033, #2D0058) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.n8n-chat__header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+              transparent 30%, 
+              rgba(155, 77, 255, 0.1) 45%, 
+              rgba(155, 77, 255, 0.2) 50%, 
+              rgba(155, 77, 255, 0.1) 55%, 
+              transparent 70%);
+  background-size: 200% 200%;
+  animation: shine 3s infinite linear;
 }
 
 .n8n-chat__input-wrapper {
@@ -259,42 +226,7 @@
   transform: scale(1.1) !important;
 }
 
-.n8n-chat__header {
-  background: linear-gradient(135deg, #1A0033, #2D0058) !important;
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-.n8n-chat__header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, 
-              transparent 30%, 
-              rgba(155, 77, 255, 0.1) 45%, 
-              rgba(155, 77, 255, 0.2) 50%, 
-              rgba(155, 77, 255, 0.1) 55%, 
-              transparent 70%);
-  background-size: 200% 200%;
-  animation: shine 3s infinite linear;
-}
-
-.n8n-chat__header-title {
-  font-family: 'Outfit', sans-serif !important;
-  font-weight: 600 !important;
-  color: white !important;
-  text-shadow: 0 0 10px rgba(155, 77, 255, 0.5) !important;
-}
-
-.n8n-chat__header-subtitle {
-  color: #D4AFFF !important;
-  font-size: 0.9rem !important;
-}
-
-/* New animations for the chatbot */
+/* Chatbot animations */
 @keyframes pulse-purple {
   0% {
     box-shadow: 0 0 0 0 rgba(155, 77, 255, 0.7);
@@ -329,14 +261,6 @@
   100% {
     background-position: -200% 0;
   }
-}
-
-/* Ensure the chatbot toggle button appears in the bottom right corner */
-.chatbot-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
 }
 
 /* Utilities */

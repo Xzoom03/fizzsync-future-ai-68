@@ -6,14 +6,14 @@ import TermsOfService from "./components/TermsOfService";
 import NotFound from "./pages/NotFound";
 import AbstractDecoration from "./components/AbstractDecoration";
 import TextureOverlay from "./components/TextureOverlay";
-import ChatbotWidget from "./components/ChatbotWidget";
+import NewChatBot from "./components/NewChatBot";
 
 function App() {
   return (
     <>
       <AbstractDecoration />
       <TextureOverlay />
-      <ChatbotWidget />
+      <NewChatBot />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
