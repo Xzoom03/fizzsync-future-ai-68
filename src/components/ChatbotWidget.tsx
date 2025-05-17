@@ -12,41 +12,53 @@ const ChatbotWidget = () => {
         link.rel = "stylesheet";
         document.head.appendChild(link);
         
-        // Import the chat module
-        const module = await import('https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js');
-        const { createChat } = module;
+        // Load script dynamically
+        const script = document.createElement('script');
+        script.src = "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+        script.type = "module";
         
-        // Create chat with FizzSync branding
-        createChat({
-          webhookUrl: '',
-          webhookConfig: {
-            method: 'POST',
-            headers: {}
-          },
-          target: '#n8n-chat',
-          mode: 'window',
-          chatInputKey: 'chatInput',
-          chatSessionKey: 'sessionId',
-          metadata: {},
-          showWelcomeScreen: false,
-          defaultLanguage: 'en',
-          initialMessages: [
-            'Hello there! 👋',
-            'I\'m Fizzer, your AI automation assistant. How can I help you automate your business tasks today?',
-            'I can provide information about our AI automation solutions, integration options, or help you get started with FizzSync.'
-          ],
-          i18n: {
-            en: {
-              title: 'Chat with Fizzer',
-              subtitle: "Your AI automation assistant is here to help 24/7.",
-              footer: 'Powered by FizzSync AI',
-              getStarted: 'New Conversation',
-              inputPlaceholder: 'Ask me about AI automation...',
-            },
-          },
-        });
+        // Create and execute the chat initialization after script loads
+        script.onload = () => {
+          // Create a new script element to initialize the chat
+          const initScript = document.createElement('script');
+          initScript.type = "module";
+          initScript.textContent = `
+            import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+            
+            createChat({
+              webhookUrl: '',
+              webhookConfig: {
+                method: 'POST',
+                headers: {}
+              },
+              target: '#n8n-chat',
+              mode: 'window',
+              chatInputKey: 'chatInput',
+              chatSessionKey: 'sessionId',
+              metadata: {},
+              showWelcomeScreen: false,
+              defaultLanguage: 'en',
+              initialMessages: [
+                'Hello there! 👋',
+                'I\'m Fizzer, your AI automation assistant. How can I help you automate your business tasks today?',
+                'I can provide information about our AI automation solutions, integration options, or help you get started with FizzSync.'
+              ],
+              i18n: {
+                en: {
+                  title: 'Chat with Fizzer',
+                  subtitle: "Your AI automation assistant is here to help 24/7.",
+                  footer: 'Powered by FizzSync AI',
+                  getStarted: 'New Conversation',
+                  inputPlaceholder: 'Ask me about AI automation...',
+                },
+              },
+            });
+          `;
+          document.head.appendChild(initScript);
+        };
         
-        console.info('n8n chat script loaded');
+        document.head.appendChild(script);
+        console.info('n8n chat script loading');
       } catch (error) {
         console.error('Failed to load n8n chat:', error);
       }
@@ -61,6 +73,10 @@ const ChatbotWidget = () => {
       if (linkElement) {
         linkElement.remove();
       }
+      
+      // Remove any script elements we added
+      const scripts = document.querySelectorAll('script[src="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js"]');
+      scripts.forEach(script => script.remove());
       
       // Remove the chat widget if it exists
       const chatElement = document.querySelector('.n8n-chat');
