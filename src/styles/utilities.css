@@ -1,0 +1,7 @@
+
+/* Utilities */
+@layer utilities {
+  .bg-gradient-conic {
+    background-image: conic-gradient(var(--tw-gradient-stops));
+  }
+}
