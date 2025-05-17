@@ -64,7 +64,13 @@ const ChatbotWidget = () => {
       }
     };
 
-    loadChat();
+    // Make sure to wait for DOM to be fully loaded
+    if (document.readyState === 'complete') {
+      loadChat();
+    } else {
+      window.addEventListener('load', loadChat);
+      return () => window.removeEventListener('load', loadChat);
+    }
     
     // Clean up function
     return () => {
