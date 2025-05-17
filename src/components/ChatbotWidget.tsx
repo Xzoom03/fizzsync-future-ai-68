@@ -40,7 +40,7 @@ const ChatbotWidget = () => {
               defaultLanguage: 'en',
               initialMessages: [
                 'Hello there! 👋',
-                'I\'m Fizzer, your AI automation assistant. How can I help you automate your business tasks today?',
+                'I\\'m Fizzer, your AI automation assistant. How can I help you automate your business tasks today?',
                 'I can provide information about our AI automation solutions, integration options, or help you get started with FizzSync.'
               ],
               i18n: {
@@ -87,7 +87,7 @@ const ChatbotWidget = () => {
   }, []);
 
   return (
-    <div id="n8n-chat"></div>
+    <div id="n8n-chat" className="chatbot-container"></div>
   );
 };
 

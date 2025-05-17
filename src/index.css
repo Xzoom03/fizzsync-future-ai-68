@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -108,8 +107,6 @@
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
-    /* ... keep existing code (dark mode variables) */
   }
 }
 
@@ -123,10 +120,40 @@
   }
 }
 
-/* ... keep existing code (keyframe animations) */
+/* Keyframe animations */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
 
 /* Custom scrollbar styling */
-/* ... keep existing code (scrollbar styling) */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #1A0033; /* Color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9B4DFF; /* Color of the scroll thumb */
+  border-radius: 4px; /* Roundness of the scroll thumb */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6A0DAD; /* Color of the scroll thumb on hover */
+}
 
 /* FizzSync Chatbot Custom Styles */
 .n8n-chat__window {
@@ -173,6 +200,10 @@
   align-items: center !important;
   justify-content: center !important;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 1000 !important;
 }
 
 .n8n-chat__toggle:hover {
@@ -300,8 +331,15 @@
   }
 }
 
-/* ... keep existing code (the rest of the CSS) */
+/* Ensure the chatbot toggle button appears in the bottom right corner */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
 
+/* Utilities */
 @layer utilities {
   .bg-gradient-conic {
     background-image: conic-gradient(var(--tw-gradient-stops));
